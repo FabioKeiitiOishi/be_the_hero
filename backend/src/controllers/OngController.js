@@ -11,7 +11,7 @@ module.exports = {
   async create(request, response) {
     const { name, email, whatsapp, city, uf } = request.body;
 
-    const id = generateUniqueId.generateUniqueId();
+    const id = generateUniqueId();
 
     await connection('ongs').insert({
       id,
